@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%; /* Deep Indigo background */
+    --foreground: 210 20% 98%; /* Crisp White for main text */
+    --card: 240 10% 10.9%; /* Slightly lighter indigo for cards */
+    --card-foreground: 210 20% 98%; /* Crisp White for card text */
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 260 80% 60%; /* Soft Lavender for primary actions/highlights */
+    --primary-foreground: 210 20% 98%; /* White text on primary buttons */
+    --secondary: 240 10% 20%; /* Muted indigo for secondary elements */
+    --secondary-foreground: 210 20% 98%; /* White text on secondary elements */
+    --muted: 240 10% 20%; /* Muted for subtle backgrounds like hint box */
+    --muted-foreground: 210 10% 80%; /* Lighter grey for muted text */
+    --accent: 260 80% 60%; /* Accent matches primary for consistency */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
+    --destructive-foreground: 210 20% 98%;
+    --border: 240 10% 20%; /* Border color */
+    --input: 240 10% 20%; /* Input field background */
+    --ring: 260 80% 60%; /* Focus ring color */
+    --radius: 0.5rem;
+  }
+
+  /* We'll stick to one theme for simplicity, removing the dark theme for now */
+  /* If you want a light/dark toggle, we can reintroduce it later */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
